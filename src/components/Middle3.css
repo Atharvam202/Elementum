@@ -1,0 +1,502 @@
+@import url('https://fonts.cdnfonts.com/css/ifti');
+
+.projects {
+    width: 100%;
+    padding: 40px 6%;
+    background: #fff;
+}
+
+/* Each Row */
+
+.project-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 28px 0;
+
+    border-top: 1px solid #ddd;
+}
+
+.project-row:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Left */
+
+.project-left {
+    width: 22%;
+}
+
+.project-left p {
+    font-size: 20px;
+    color: #222;
+    line-height: 1.4;
+    font-family: 'Gerbil', sans-serif;
+}
+
+/* Center */
+
+.project-center {
+    width: 65%;
+    position: relative;
+}
+
+.project-center h2 {
+    font-size: 58px;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.1;
+}
+
+/* Circle Image */
+
+.project-circle {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    top: 50%;
+    left: 58%;
+
+    transform: translate(-50%, -50%);
+}
+
+/* Arrow */
+
+.project-arrow {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 42px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.project-row:hover .project-arrow {
+    transform: translateX(10px);
+}
+
+.project-row:hover h2 {
+    color: #555;
+}
+.new-redline {
+    position: absolute;
+    top:2200px;      /* Move down */
+    left: 595px;
+    width: 55%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===========================
+   MIDDLE 3 SECTION
+=========================== */
+
+.Middle3 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 6%;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Heading */
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+}
+
+.left3 {
+    position: relative;
+}
+
+.top_heading {
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #111;
+    position: relative;
+    z-index: 2;
+    font-family: 'Ifti', sans-serif;
+}
+
+/* Yellow underline */
+
+.yellow-line4 {
+    position: absolute;
+    width: 180px;
+    left: 65px;
+    top: 245px;
+    z-index: 1;
+}
+
+.green-blobmid {
+    position: absolute;
+    width: 110px;
+    height:45px;
+    left: 395px;
+    top: 125px;
+    z-index: 1;
+}
+
+/* Projects */
+
+.bottom {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Decorative red curve */
+
+.new-redline {
+    position: absolute;
+    right: 0;
+    top: -210px;
+    width: 55%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hover */
+
+.project-row {
+    transition: .35s ease;
+}
+
+.project-row:hover {
+    padding-left: 15px;
+}
+
+.project-row:hover h2 {
+    color: #444;
+}
+
+.project-row:hover .project-arrow {
+    transform: translateX(10px);
+}
+
+/* ==================================================
+   TABLETS (992px)
+================================================== */
+
+@media (max-width: 992px) {
+
+    .Middle3 {
+        min-height: auto;
+        padding: 70px 7%;
+    }
+
+    .top {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .top_heading {
+        font-size: 46px;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        padding: 28px 0;
+    }
+
+    .project-left,
+    .project-center,
+    .project-arrow {
+        width: 100%;
+    }
+
+    .project-left p {
+        font-size: 18px;
+    }
+
+    .project-center h2 {
+        font-size: 38px;
+    }
+
+    .project-arrow {
+        justify-content: flex-start;
+        font-size: 34px;
+    }
+
+    .project-circle {
+        position: static;
+        transform: none;
+        width: 80px;
+        height: 80px;
+        margin-top: 18px;
+    }
+
+    .yellow-line4,
+    .green-blobmid,
+    .new-redline {
+        display: none;
+    }
+}
+
+/* ==================================================
+   MOBILE (768px)
+================================================== */
+
+@media (max-width: 768px) {
+
+    .Middle3 {
+        padding: 60px 6%;
+    }
+
+    .top {
+        margin-bottom: 45px;
+    }
+
+    .top_heading {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .project-left p {
+        font-size: 16px;
+    }
+
+    .project-center h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .project-circle {
+        width: 65px;
+        height: 65px;
+    }
+
+    .project-arrow {
+        font-size: 30px;
+    }
+
+    .yellow-line4,
+    .green-blobmid,
+    .new-redline {
+        display: none;
+    }
+}
+
+/* ==================================================
+   SMALL MOBILE (480px)
+================================================== */
+
+@media (max-width: 480px) {
+
+    .Middle3 {
+        padding: 50px 22px;
+    }
+
+    .top_heading {
+        font-size: 30px;
+    }
+
+    .project-row {
+        gap: 16px;
+        padding: 22px 0;
+    }
+
+    .project-left p {
+        font-size: 15px;
+    }
+
+    .project-center h2 {
+        font-size: 24px;
+    }
+
+    .project-circle {
+        width: 55px;
+        height: 55px;
+    }
+
+    .project-arrow {
+        font-size: 26px;
+    }
+
+    .yellow-line4,
+    .green-blobmid,
+    .new-redline {
+        display: none;
+    }
+}
+.Middle3{
+    animation:sectionFade 1s ease;
+}
+
+@keyframes sectionFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+.yellow-line4{
+
+    animation:yellowWave 6s ease-in-out infinite;
+}
+
+@keyframes yellowWave{
+
+    0%{
+
+        transform:scaleX(1);
+    }
+
+    50%{
+
+        transform:scaleX(1.08);
+    }
+
+    100%{
+
+        transform:scaleX(1);
+    }
+}
+.yellow-line4{
+
+    animation:yellowWave 6s ease-in-out infinite;
+}
+
+@keyframes yellowWave{
+
+    0%{
+
+        transform:scaleX(1);
+    }
+
+    50%{
+
+        transform:scaleX(1.08);
+    }
+
+    100%{
+
+        transform:scaleX(1);
+    }
+}
+.green-blobmid{
+
+    animation:greenFloat 7s ease-in-out infinite;
+}
+
+@keyframes greenFloat{
+
+    0%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(-12px) rotate(4deg);
+    }
+
+    100%{
+
+        transform:translateY(0);
+    }
+}
+.new-redline{
+
+    animation:redLineMove 10s ease-in-out infinite;
+}
+
+@keyframes redLineMove{
+
+    0%{
+
+        transform:translateX(0);
+    }
+
+    50%{
+
+        transform:translateX(-20px);
+    }
+
+    100%{
+
+        transform:translateX(0);
+    }
+}
+.project-row{
+
+    transition:
+    transform .45s,
+    background .45s,
+    padding .45s;
+}
+
+.project-row:hover{
+
+    background:#fafafa;
+
+    transform:translateX(12px);
+
+    padding-left:20px;
+}
+.project-center h2{
+
+    transition:
+    color .4s,
+    transform .4s,
+    letter-spacing .4s;
+}
+
+.project-row:hover h2{
+
+    color:#111;
+
+    transform:translateX(12px);
+
+    letter-spacing:1px;
+}
+.project-left{
+
+    transition:
+    opacity .4s,
+    transform .4s;
+}
+
+.project-row:hover .project-left{
+
+    opacity:.75;
+
+    transform:translateX(8px);
+}
+.project-arrow{
+
+    transition:
+    transform .4s,
+    letter-spacing .4s;
+}
+
+.project-row:hover .project-arrow{
+
+    transform:
+    translateX(15px)
+    scale(1.25);
+
+    letter-spacing:4px;
+}

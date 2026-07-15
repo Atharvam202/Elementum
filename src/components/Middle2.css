@@ -1,0 +1,363 @@
+@import url('https://fonts.cdnfonts.com/css/ifti');
+
+.Middle2{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+    position:relative;
+}
+
+/* LEFT */
+
+.left2{
+    width:45%;
+    position:relative;
+    left:-50px;
+    top:40px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.left-img2 {
+    width: 430px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+/* TRIANGLES */
+
+.red-triangle1,
+.red-triangle2 {
+    position: absolute;
+    width: 120px;
+}
+
+.red-triangle1 {
+    top: 20px;
+    left: 10px;
+    z-index: 1;
+}
+
+.red-triangle2 {
+    bottom: 0px;
+    right: 45px;
+    z-index: 3;
+}
+
+/* RIGHT */
+
+.right2{
+    width:45%;
+    position:relative;
+}
+
+.left_heading{
+    font-size:54px;
+    line-height:1.05;
+    font-weight:500;
+    font-family: 'Ifti', sans-serif;
+}
+
+.home-para{
+    margin-top:30px;
+    line-height:1.8;
+    color:#555;
+    max-width:520px;
+    font-size:14px;
+}
+
+/* Green Blob */
+
+.green-blob2{
+    position:absolute;
+    width:100px;
+    height:51px;
+    top:220px;
+    right:480px;
+    z-index:-1;
+}
+
+/* Yellow Underline */
+
+.yellow-line2{
+    position:absolute;
+    width:240px;
+    top:315px;
+    right:120px;
+}
+
+/* Read More */
+
+.read-more-btn1{
+    margin-top:35px;
+    display:flex;
+    align-items:center;
+    gap:0px;
+}
+
+.read-more-btn1 .line{
+    width:80px;
+    height:2px;
+    background:#666;
+}
+/* ==========================================
+   TABLETS (992px and below)
+========================================== */
+
+@media (max-width: 992px) {
+
+    .Middle2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 70px 6%;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    /* Hide decorative elements */
+
+    .yellow-line2,
+    .green-blob2,
+    .red-triangle1,
+    .red-triangle2 {
+        display: none;
+    }
+
+    /* Image */
+
+    .left2 {
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-img2 {
+        width: 330px;
+        height: 330px;
+    }
+
+    /* Text */
+
+    .right2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_heading {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .home-para {
+        max-width: 700px;
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .read-more-btn1 {
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   MOBILE (768px and below)
+========================================== */
+
+@media (max-width: 768px) {
+
+    .Middle2 {
+        padding: 60px 25px;
+        gap: 35px;
+    }
+
+    .left_heading {
+        font-size: 2.4rem;
+        line-height: 1.15;
+    }
+
+    .home-para {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .left-img2 {
+        width: 270px;
+        height: 270px;
+    }
+
+    .read-more-btn1 {
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .read-more-btn1 .line {
+        width: 60px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE (480px and below)
+========================================== */
+
+@media (max-width: 480px) {
+
+    .Middle2 {
+        padding: 50px 18px;
+    }
+
+    .left_heading {
+        font-size: 1.9rem;
+        line-height: 1.2;
+    }
+
+    .home-para {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .left-img2 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .read-more-btn1 {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .read-more-btn1 .line {
+        width: 50px;
+    }
+}
+.left2{
+
+    opacity:0;
+
+    animation:leftImageReveal 1s ease forwards;
+}
+
+@keyframes leftImageReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(-80px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+    }
+}
+.right2{
+
+    opacity:0;
+
+    animation:rightContentReveal 1s .3s ease forwards;
+}
+
+@keyframes rightContentReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(80px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+    }
+}
+.yellow-line2{
+
+    animation:yellowWave2 5s ease-in-out infinite;
+}
+
+@keyframes yellowWave2{
+
+    0%{
+
+        transform:scaleX(1);
+    }
+
+    50%{
+
+        transform:scaleX(1.08);
+    }
+
+    100%{
+
+        transform:scaleX(1);
+    }
+}
+.green-blob2{
+
+    animation:greenMorph2 7s ease-in-out infinite;
+}
+
+@keyframes greenMorph2{
+
+    0%{
+
+        transform:
+        scale(1);
+    }
+
+    50%{
+
+        transform:
+        scale(1.1)
+        rotate(-5deg);
+    }
+
+    100%{
+
+        transform:
+        scale(1);
+    }
+}
+.right2 .read-more-btn1{
+
+    opacity:0;
+
+    animation:fadeUp .8s .6s forwards;
+
+    transition:.4s;
+}
+
+.right2 .read-more-btn1:hover{
+
+    transform:translateX(8px);
+}
